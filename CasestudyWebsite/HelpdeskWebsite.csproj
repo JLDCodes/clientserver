@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HelpdeskViewModels\HelpdeskViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\home.html" />
+    <None Include="wwwroot\lib\css\bootstrap.min.css" />
+    <None Include="wwwroot\lib\js\bootstrap-confirmation.min.js" />
+    <None Include="wwwroot\lib\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\js\employeelookup.js" />
+    <None Include="wwwroot\lib\js\jquery.min.js" />
+    <None Include="wwwroot\lib\js\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\js\popper.min.js" />
+  </ItemGroup>
+
+
+</Project>

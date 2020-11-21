@@ -1,0 +1,12 @@
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskViewModels.deps.json
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskViewModels.dll
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskViewModels.pdb
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskDAL.dll
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskDAL.pdb
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.csprojAssemblyReference.cache
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.AssemblyInfoInputs.cache
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.AssemblyInfo.cs
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.csproj.CoreCompileInputs.cache
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.csproj.CopyComplete
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.dll
+C:\Users\JL\source\repos\ClientServerCaseStudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.pdb
