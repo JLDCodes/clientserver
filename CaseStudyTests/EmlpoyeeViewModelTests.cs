@@ -50,7 +50,7 @@ namespace ExerciseTests
         [Fact]
         public void Employee_UpdateTest()
         {
-            EmployeeViewModel vm = new EmployeeViewModel { Email = "jld@abc.com" };
+            EmployeeViewModel vm = new EmployeeViewModel { Email = "bs@abc.com" };
             vm.GetByEmail(); // student just added
             vm.PhoneNo = vm.PhoneNo == "(555)555-5551" ? "(555)555-5552" : "(555)555-5551";
             int employeeUpdated = vm.Update();

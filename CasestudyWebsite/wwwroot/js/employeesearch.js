@@ -49,7 +49,7 @@
 		$("#modalstatus").text("add new employee");
 		$("#deletebutton").hide();
 		clearModalFields();
-		
+
 	};
 	//clear modal 
 	const clearModalFields = () => {
@@ -106,7 +106,7 @@
 			emp.lastName = $("#TextBoxLastname").val();
 			emp.phoneNo = $("#TextBoxPhone").val();
 			emp.email = $("#TextBoxEmail").val();
-			
+
 			emp.id = parseInt(sessionStorage.getItem("id"));
 			emp.departmentId = parseInt(sessionStorage.getItem("departmentId"));
 			emp.timer = sessionStorage.getItem("timer");
@@ -159,6 +159,7 @@
 		}
 	};//delete 
 
+
 	$("#employeeList").click((e) => {
 		if (!e) e = window.event;
 		let id = e.target.parentNode.id;
@@ -166,22 +167,14 @@
 			id = e.target.id;
 		}
 		if (id !== "status" && id !== "heading") {
-			let data = JSON.parse(sessionStorage.getItem("allemmployees"));
+			let data = JSON.parse(sessionStorage.getItem("allemployees"));
 			id === "0" ? setupForAdd() : setupForUpdate(id, data);
 		} else {
 			return false;
 		}
 	});
-
-	$("#srch").keyup(() => {
-		let alldata = JSON.parse(sessionStorage.getItem("allemmployees"));
-		let filterddata = alldata.filter((stu) => stu.lastName.match(new RegExp($("#srch").val(), 'i')));
-		buildEmployeeList(filterddata, false);
-	});//search  keyup
-
-
 	// builds the the employee list
-	const buildEmployeeList = (data, usealldata = true) => {
+	const buildEmployeeList = (data) => {
 		$("#employeeList").empty();
 		div = $(`<div class="list-group-item text-white bg-secondary row d-flex" id="status">employee Info</div>
 				<div class= "list-group-item row d-flex text-center" id="heading">
@@ -190,7 +183,7 @@
 				<div class= "col-4 h4">Last</div>
 				 </div>`);
 		div.appendTo($("#employeeList"));
-		usealldata ? sessionStorage.setItem("allemmployees", JSON.stringify(data)) : null;
+		sessionStorage.setItem("allemployees", JSON.stringify(data));
 		btn = $(`<button class="list-group=item row d-flex" id="0"><divclass="col-12 text-left">...click to add employee</div></button>`);
 		btn.appendTo($("#employeeList"));
 		data.map(emp => {
@@ -203,7 +196,6 @@
 		});
 	};
 	getAll("");
-
 });
 
 // Incase of error
