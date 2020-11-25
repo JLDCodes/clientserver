@@ -203,8 +203,22 @@
 		});
 	};
 	getAll("");
+	//do we have a picture?
+	$("input:file").change(() => {
+		const reader = new FileReader();
+		const file = $("#uploader")[0].files[0];
 
+		file ? reader.readAsBinaryString(file) : null;
+
+		reader.onload = (readerEvt) => {
+			// get binary data then convert to encoded string
+			const binaryString = reader.result;
+			const encodedString = btoa(binaryString);
+			sessionStorage.setItem('staffpicture', encodedString);
+		};
+	});
 });
+
 
 // Incase of error
 const errorRtn = (problemJson, status) => {

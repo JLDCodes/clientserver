@@ -22,14 +22,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="EmployeeaddUpdate.html">Employee</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="studentsearch.html">Student Search</a>
-                </li>
             </ul>
             <div class="form-group mt-2 mr-2">
                 <input type="text" class="form-control" id="srch" placeholder="Search">
             </div>
-            
+
         </div>
         <a class="nav btn-link float-right"> V1.0</a>
     </nav>
@@ -43,81 +40,90 @@
             </div>
         </div>
     </div>
-    <!--this is what pops up when you click add-->
-    <div class="modal fade text-center mr-3" data-backdrop="static" id="theModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header d-block">
-                    <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <div class="modal-title text-center" id="modaltitle"></div>
-                </div>
-                <div class="modal-body">
-                    <div class="mx-4 my-4">
-                        <div class="card">
-                            <div class="card-header text-center">
-                                employee Information
+    <form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+        <!--this is what pops up when you click add-->
+        <div class="modal fade text-center mr-3" data-backdrop="static" id="theModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-block">
+                        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-title text-center" id="modaltitle"></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mx-4 my-4">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    employee Information
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">Title:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter title" id="TextBoxTitle" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">First:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter first name" id="TextBoxFirstname" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Surname:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter last name" id="TextBoxLastname" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Phone#:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter phone#" id="TextBoxPhone" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Email:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter email address" id="TextBoxEmail" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <!--Added-->
+                                        <div class="col-4">Dept:</div>
+                                        <div class="col-8"><select id="ddlDepartments" name="ddlDepartments" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Picture:</div>
+                                        <div class="col-8 mt-3 text-left" id="ImageHolder"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-4">Title:</div>
-                                    <div class="col-8"><input type="text" placeholder="enter title" id="TextBoxTitle" class="form-control" /></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">First:</div>
-                                    <div class="col-8"><input type="text" placeholder="enter first name" id="TextBoxFirstname" class="form-control" /></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">Surname:</div>
-                                    <div class="col-8"><input type="text" placeholder="enter last name" id="TextBoxLastname" class="form-control" /></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">Phone#:</div>
-                                    <div class="col-8"><input type="text" placeholder="enter phone#" id="TextBoxPhone" class="form-control" /></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">Email:</div>
-                                    <div class="col-8"><input type="text" placeholder="enter email address" id="TextBoxEmail" class="form-control" /></div>
-                                </div>
-                                <div class="row">
-                                    <!--Added-->
-                                    <div class="col-4">Dept:</div>
-                                    <div class="col-8"><input type="text" placeholder="enter department" id="TextBoxDept" class="form-control" /></div>
-                                </div>
+                            <div class="card-footer text-center">
+                                <input type="file" id="uploader" class="border float-left col-9 col-sm-4" />
+                                <input type="button" class="btn btn-secondary" value="update" id="actionbutton" />
+                                <input type="button" class="btn btn-secondary" data-toggle="confirmation" data-placement="right" value="delete" id="deletebutton" />
+                                <div id="modalstatus" class="text-left mt-3 mb-2"></div>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer text-center">
-                        <input type="button" class="btn btn-secondary" value="update" id="actionbutton" />
-                        <input type="button" class="btn btn-secondary" data-toggle="confirmation" data-placement="right" value="delete" id="deletebutton" />
-                        <div id="modalstatus" class="text-left mt-3 mb-2"></div>
-
+                  
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Footer-->
-    <style>
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: cornflowerblue;
-            color: white;
-            text-align: left;
-        }
-    </style>
+        <!--Footer-->
+        <style>
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: cornflowerblue;
+                color: white;
+                text-align: left;
+            }
+        </style>
 
-    <div class="footer">
-        <p>Case#1 Jean-Luc</p>
-    </div>
-    <script src="lib/js/jquery.min.js"></script>
-    <script src="lib/js/popper.min.js"></script>
-    <script src="lib/js/bootstrap.min.js"></script>
-    <script src="lib/js/bootstrap-confirmation.min.js"></script>
-    <script src="js/employeeaddupdate.js"></script>
+        <div class="footer">
+            <p>Case#1 Jean-Luc</p>
+        </div>
+        </form>
+        <script src="lib/js/jquery.min.js"></script>
+        <script src="lib/js/jquery.validate.min.js"></script>
+        <script src="lib/js/popper.min.js"></script>
+        <script src="lib/js/bootstrap.min.js"></script>
+        <script src="lib/js/bootstrap-confirmation.min.js"></script>
+        <script src="js/employeesearch.js"></script>
 </body>
 </html>

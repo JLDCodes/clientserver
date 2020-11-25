@@ -1,6 +1,7 @@
 using HelpdeskDAL;
 using Xunit;
 using System.Collections.Generic;
+using ExercisesDAL;
 
 namespace CaseStudyTests
 {
@@ -89,6 +90,12 @@ namespace CaseStudyTests
                     Assert.True(false);
                 }
             }
+        }
+        [Fact]
+        public void Employee_LoadPicsTest()
+        {
+            DALUtil util = new DALUtil();
+            Assert.True(util.AddEmployeePicsToDb());
         }
     }
 }

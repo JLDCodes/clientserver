@@ -83,6 +83,10 @@ namespace HelpdeskViewModels
                 {
                     StaffPicture64 = Convert.ToBase64String(emp.StaffPicture);
                 }
+                //if (StaffPicture64 != null)
+                //{
+                //    emp.StaffPicture = Convert.FromBase64String(StaffPicture64);
+                //}
                 Timer = Convert.ToBase64String(emp.Timer);
             }
             catch (NullReferenceException nex)
@@ -116,6 +120,10 @@ namespace HelpdeskViewModels
                     empVm.id = emp.Id;
                     empVm.DepartmentId = emp.DepartmentId;
                     //empVm.DepartmentName = emp.Department.DepartmentName;
+                    if (emp.StaffPicture != null)
+                    {
+                        empVm.StaffPicture64 = Convert.ToBase64String(emp.StaffPicture);
+                    }
                     empVm.Timer = Convert.ToBase64String(emp.Timer);
                     allVms.Add(empVm);
                 }
